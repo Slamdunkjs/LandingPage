@@ -1,0 +1,825 @@
+* {
+	padding: 0;
+	margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+#section1{
+  background: #141429;
+}
+
+.section1{
+  position: relative;
+  max-width: 1200px;
+  margin: auto;
+  height: 100%;
+}
+
+.ded{
+  position: absolute;
+  right: -100px;
+  bottom: 0;
+  z-index: 100;
+}
+
+#section2{
+  background-image: url("../img/slide2.png");
+  background-size: cover;
+}
+
+.section2, .section3{
+  max-width: 1200px;
+  margin: auto;
+}
+
+#section3{
+  background-image: url("../img/slide3.png");
+  background-size: cover;
+}
+
+#element1{
+  color:white;
+}
+
+.header{
+  position: relative;
+}
+
+.fixed {
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 105px;
+  background-color: rgba(0,0,0,0);
+  position:fixed;
+  padding: 43px 49px 0 49px;
+}
+
+.navMenu{
+  position: relative;
+  width: 100%;
+  margin: auto;
+}
+
+.logo{
+  float: left;
+}
+
+.nav{
+  width: auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  overflow: hidden;
+}
+
+.pageNav{
+  height: 19px;
+  margin-right: 50px;
+  color:white;
+  line-height: 19px;
+  text-decoration: none;
+}
+
+.navMain, .navAbout, .navProducts, .navContacts{
+  position: relative;
+}
+
+.navMain span::after{
+  content: "Main";
+  color: red;
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+.navAbout span::after{
+  content: "About";
+  color: red;
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+.navProducts span::after{
+  content: "Products";
+  color: red;
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+.navContacts span::after{
+  content: "Contacts";
+  color: red;
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+.navEmpty{
+  width: 100%;
+  height: 21px; /* 33% от header */
+}
+.navForFlex{
+  display: flex;
+  flex-direction: column;
+}
+
+.pageNav:hover{
+  transition: 1s;
+  transform: translateY(-19px);
+}
+
+.menu-btn{
+  display: block;
+  width: 60px;
+  height: 60px;
+  float: right;
+  background:#d02b2b;
+  position: relative;
+  border-radius: 50% 0 50% 50%;
+  z-index: 3;
+}
+
+.menuActive{
+  position: absolute;
+  right: 0;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  background: #d02b2b;
+  transition: 1s;
+}
+
+.pagesForMenu{
+  position: absolute;
+  top: 100px;
+  right: 50px;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  z-index: 100;
+  transform: scale(0);
+  transform-origin: 110% -40%;
+}
+
+.pagesForMenuOn{
+  transition: 1s;
+  transform: scale(1);
+}
+
+.pagesForMenu a{
+  color: white;
+  font-size: 32px;
+  line-height: 37px;
+  text-decoration: none;
+}
+
+.menu-btn span, 
+.menu-btn span::after, 
+.menu-btn span::before{
+  background: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  margin-left: -10px;
+  height: 2px;
+  margin-top: -1px;
+}
+
+.menu-btn span::after, 
+.menu-btn span::before{
+  content: "";
+  transition: 0.2s;
+}
+
+.menu-btn span::before{
+  transform: translateY(7px);
+}
+
+.menu-btn span::after{
+  transform: translateY(-7px);
+}
+
+.menu-btn-active span{
+  height: 0;
+}
+
+.menu-btn-active span:before{
+  transform: rotate(-45deg);
+}
+
+.menu-btn-active span:after{
+  transform: rotate(45deg);
+}
+
+.menu{
+  position: relative;
+}
+
+.menuActiveOn{
+  transform: scale(15);
+  z-index: 2;
+}
+
+.snow{
+  position: absolute;
+  left: -175px;   /* width img 350px/2 */
+  animation-name: rotateBox;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes rotateBox{
+  from {
+    transform: rotate(0deg);
+  }
+
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+/* star */
+
+#star-five {
+  margin: 0 0;
+  position: absolute;
+  display: block;
+  color: red;
+  width: 0px;
+  height: 0px;
+  border-right:  100px solid transparent;
+  border-bottom: 70px  solid #fcf9bf;
+  border-left:   100px solid transparent;
+  -moz-transform:    rotate(35deg);
+  -webkit-transform: rotate(35deg);
+  -ms-transform:     rotate(35deg);
+  -o-transform:      rotate(35deg);
+  transform: scale(0.05);
+  animation-name: star;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+#star-five:before {
+  border-bottom: 80px solid #fcf9bf;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  position: absolute;
+  height: 0;
+  width: 0;
+  top: -45px;
+  left: -65px;
+  display: block;
+  content: '';
+  -webkit-transform: rotate(-35deg);
+  -moz-transform:    rotate(-35deg);
+  -ms-transform:     rotate(-35deg);
+  -o-transform:      rotate(-35deg);
+  
+}
+#star-five:after {
+  position: absolute;
+  display: block;
+  color: red;
+  top: 3px;
+  left: -105px;
+  width: 0px;
+  height: 0px;
+  border-right: 100px solid transparent;
+  border-bottom: 70px solid #fcf9bf;
+  border-left: 100px solid transparent;
+  -webkit-transform: rotate(-70deg);
+  -moz-transform:    rotate(-70deg);
+  -ms-transform:     rotate(-70deg);
+  -o-transform:      rotate(-70deg);
+  content: '';
+}
+
+@keyframes star {
+  25% {
+    transform: scale(0.02);
+  }
+
+  75% {
+    transform: scale(0.08);
+  }
+
+  100% {
+    transform: scale(0.05);;
+  }
+}
+
+/* start end */
+
+.goSnowLeft, .goSnowRight{
+  position: absolute;
+  display: block;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+}
+.goSnowLeft{
+  animation-name: goSnowLeft;
+  animation-duration: 16s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.goSnowLeft:nth-child(2n){
+  animation-delay: 8s;
+}
+
+@keyframes goSnowLeft{
+  0%{
+    transform: translate(0, 0); 
+  }
+
+  25% {
+    transform: translate(25px, 50vh); 
+  }
+
+  50% {
+    transform: translate(0, 100vh);
+  }
+
+  75% {
+    transform: translate(-25px, 150vh);
+  }
+
+  100% {
+    transform: translate(0, 200vh);
+  }
+}
+
+.goSnowRight{
+  animation-name: goSnowRight;
+  animation-duration: 16s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.goSnowRight:nth-child(2n){
+  animation-delay: 8s;
+}
+
+@keyframes goSnowRight{
+  0%{
+    transform: translate(0, 0); /* padding-top:43px */
+  }
+
+  25% {
+    transform: translate(-25px, 50vh); 
+  }
+
+  50% {
+    transform: translate(0, 100vh);
+  }
+
+  75% {
+    transform: translate(25px, 150vh);
+  }
+
+  100% {
+    transform: translate(0, 200vh);
+  }
+}
+
+.speak{
+  background: white;
+  position: absolute;
+  right: 450px;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  border-radius: 150px / 75px;
+  box-shadow: 4px 5px 15px rgba(255, 255, 255, 0.25);
+  padding: 25px;
+  transform: rotate(-0.15deg);
+  animation-name: dropPhrase;
+  animation-duration: 4s;
+  transform-origin: 200% 0;
+}
+
+.speak span{
+  display: block;
+}
+
+.who{
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 50px solid white;
+
+  background: rgba(0,0,0,0);
+  transform: rotate(58.28deg);
+}
+
+@keyframes dropPhrase{
+  0%{
+    transform: scale(0);
+  }
+
+  75%{
+    transform: scale(0);
+  }
+
+  100%{
+    transform: scale(1);
+  }
+}
+
+.mainText, .loremText, .callText{
+  color: white;
+  margin-left: 100px;
+}
+
+.mainText{
+  padding-top: 148px; /* 253-105(header)*/
+}
+
+.loremText{
+  padding: 20px 0 39px 0;
+}
+
+.callText a{
+  color: white;
+  border: 2px solid white;
+  border-radius: 20px 20px 20px 0;
+  padding: 12px 40px;
+}
+
+.callText a:hover{
+  background: white;
+  color: #141429
+}
+
+.textForIndex{
+  position: relative;
+  z-index: 200;
+}
+
+.section2{
+  padding-top: 90px;
+}
+
+.textForSecondSection{
+  border: 2px solid white;
+  width: 550px;
+  min-height: 400px;
+  border-radius: 15px;
+  padding: 60px 35px;
+  color:white;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.text2Left, .choose{
+  max-width: 650px;
+}
+
+.section2{
+  display: flex;
+
+}
+
+.text2Left span{
+  display: block;
+  color:white;
+  padding-bottom: 30px;
+}
+
+.choose{
+  display: flex;
+  justify-content: flex-start;
+}
+
+.choose div{
+  width: 150px;
+  height: 150px;
+  border: 5px solid white;
+  border-radius: 50%;
+}
+
+.choose div:hover{
+  cursor: pointer;
+}
+
+.choose2 {
+  margin: 0 40px;
+}
+
+.choose1, .choose2, .choose3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.choose2, .choose3, .choose1{
+  background: white;
+}
+
+.visible{
+  background: rgba(0,0,0,0);
+}
+
+.mainText2{
+  padding-right: 30px;
+}
+
+.divImg2right{
+  display: flex;
+  align-items: center;
+}
+
+.mainText2 span{
+  display: block;
+}
+
+.mainText2Right{
+  padding-bottom: 30px;
+}
+
+
+.section3 span:first-child{
+  display: block;
+  color: white;
+  padding: 70px 0 30px 0;
+}
+
+.formForFlex{
+  height: 140px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.field, .fieldInput {
+  width: 48%;
+  height: 35%;
+}
+
+.dropdown{
+  width: 48%;
+  height: 35%;
+  position: relative;
+  color:red;
+}
+
+.dropdown::after {
+  content: '';
+  position: absolute;
+  top: 11px;
+  right: 15px;
+  display: block;
+  width: 13px;
+  height: 13px;  
+  box-shadow: 2px 2px 0 0 white;
+  transform: rotate(45deg);
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.dropdown.open::after{
+  top: 21px;
+  transform: rotate(-135deg);
+}
+
+.dropdown-choise{
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.dropdown-choise:focus, .field:focus, .textarea:focus, .dropdown-list-item:focus {
+  outline: none;
+}
+
+.open .dropdown-choise {
+  border-radius: 15px 15px 0 0;
+}
+
+.dropdown-list{
+  position: absolute;
+  top: calc(100% - 5px);
+  width: 100%;
+  padding: 5px 0;
+  background: #fffcfc;
+  border-radius: 0 0 15px 15px;
+  transform: scaleY(0);
+  transition: 0.5s;
+  transform-origin: 0 0;
+}
+
+.dropdown-list-item {
+  width: 100%;
+  cursor: pointer;
+  border: none;
+  text-align: left;
+  padding: 15px 23px;
+  background-color: transparent;
+  color: grey;
+}
+
+.open .dropdown-list{
+  transform: scaleY(1);
+}
+
+.dropdown-list-item:hover {
+  color: #D02B2B;
+}
+
+
+.dropdown-list-item{
+  width: 100%;
+  height: 100%;
+}
+
+.what{
+  color: #d02b2b;
+}
+
+.forForm{
+  max-width: 470px;
+}
+
+.textarea{
+  height: 75px;
+  width: 100%;
+  padding-top: 5px;
+}
+
+.textarea, .field, .dropdown-choise{
+  padding-left: 20px;
+  border: 3px solid #FFFFFF;
+  background: rgba(0,0,0,0);
+  border-radius: 15px;
+}
+
+::-webkit-input-placeholder {color:white;}
+::-moz-placeholder          {color:white;}/* Firefox 19+ */
+:-moz-placeholder           {color:white;}/* Firefox 18- */
+:-ms-input-placeholder      {color:white;}
+
+.endForm{
+  padding-top:18px;
+  position: relative;
+}
+
+.fieldInput{
+  position: relative;
+}
+
+input, textarea {
+  color: white;
+}
+
+.fieldInput i {
+	position: absolute;
+	right: 15px;
+	top: 35%;
+	pointer-events: none;
+}
+
+.fas {
+	color: white;
+}
+
+.custom-checkbox {
+	display: inline-block;
+	width: 19px;
+	height: 19px;
+	border: 1px solid red;
+  vertical-align: middle;
+}
+
+.custom-checkboxActive{
+  background: white;
+}
+
+.endForm input[type="checkbox"] {
+	display: none;
+}
+
+.what i{
+  color: red;
+  position: absolute;
+  left: 2px;
+  bottom: 2px;
+}
+
+.activeCheck{
+  transform: scale(0);
+}
+
+@media (min-width: 1400px){
+  .navMenu{
+    position: relative;
+    width: 1300px;
+    margin: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .fixed{ 
+    padding: 30px;
+  }
+  .navForFlex, .snow{
+    display: none;
+  }
+
+  .mainText , .loremText, .mainText2, .text2Left, .section3{
+    margin-left: 30px;
+  }
+
+  .loremText{
+    padding-bottom: 55px;
+  }
+
+  .callText{
+    display: flex;
+    justify-content: center;
+    margin: 0;
+  }
+
+  .speak{
+    display: none;
+  }
+
+  .section2{
+    flex-direction: column;
+  }
+
+  .textForSecondSection{
+    width: 100%;
+    margin: 0;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 15px;
+  }
+
+  .divImg2right img{
+    height: 250px;
+    width: 250px;
+  }
+
+  .choose{
+    max-width: 100%;
+    margin: 0;
+    display:flex;
+    justify-content: center;
+  }
+
+  .mainText2 span{
+    text-align: center;
+  }
+
+  .formForFlex{
+    height: 275px;
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+  
+  .field{
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  textarea{
+    margin-top: 25px;
+  }
+
+  .forForm{
+    max-width: 768px;
+    margin-right: 30px;
+  }
+
+  .dropdown{
+    margin-top: 15px;
+    width: 100%;
+  }
+
+  .dropdown.open::after{
+    top: 15px;
+  }
+
+  .dropdown.open::after {
+    top: 25px;
+    transform: rotate(-135deg);
+}
+}
+

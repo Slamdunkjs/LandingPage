@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css?family=Risque|Roboto&display=swap');
+
+.speak{
+  font-family: Risque;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.nav{
+  font-family: Roboto;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.pagesForMenu{
+  font-family: Risque;
+  font-size: 32px;
+  line-height: 37px;
+}
+
+.mainText{
+  font-family: Risque;
+  font-size: 72px;
+  line-height: 83px;
+}
+
+.loremText{
+  font-family: Risque;
+  font-size: 38px;
+  line-height: 44px;
+}
+
+.callText{
+  font-family: Roboto;
+}
+
+.text2Left :nth-child(1){
+  font-family: Risque;
+  font-size: 56px;
+  line-height: 65px;
+}
+
+.text2Left :nth-child(2){
+  font-family: Risque;
+  font-size: 38px;
+  line-height: 44px;
+}
+
+.mainText2Right{
+  font-family: Risque;
+  font-size: 42px;
+  line-height: 49px;
+}
+
+.secondText2Right{
+  font-family: Roboto;
+  font-size: 28px;
+  line-height: 33px;
+}
+
+.field, .what, .textarea, .dropdown-choise, .dropdown-list-item{
+  font-family: Roboto;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.section3 span {
+  font-family: Risque;
+  font-size: 56px;
+  line-height: 65px;
+}
+
+
+@media (max-width: 768px){
+  .mainText{
+    font-size: 52px;
+    line-height: 60px;
+  }
+
+  .loremText{
+    font-size: 28px;
+    line-height: 32px;
+  }
+
+  .text2Left :nth-child(1){
+    font-size: 52px;
+    line-height: 60px;
+  }
+  
+  .text2Left :nth-child(2){
+    font-size: 28px;
+    line-height: 32px;
+  }
+
+  .section3 span{
+    font-size: 52px;
+    line-height: 60px;
+  }
+
+  .what{
+    font-size: 18px;
+    line-height: 21px;
+  }
+
+  .field, .textarea, .dropdown-choise, .dropdown-list-item{
+    font-size: 20px;
+    line-height: 23px;
+  }
+}
+
+
