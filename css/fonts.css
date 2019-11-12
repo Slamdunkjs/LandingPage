@@ -1,111 +1,216 @@
-@import url('https://fonts.googleapis.com/css?family=Risque|Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
-.speak{
-  font-family: Risque;
-  font-size: 18px;
-  line-height: 21px;
+
+* {
+  font-family: Roboto, sans-serif;
 }
 
-.nav{
-  font-family: Roboto;
-  font-size: 16px;
-  line-height: 19px;
-}
-
-.pagesForMenu{
-  font-family: Risque;
-  font-size: 32px;
-  line-height: 37px;
-}
-
-.mainText{
-  font-family: Risque;
-  font-size: 72px;
-  line-height: 83px;
-}
-
-.loremText{
-  font-family: Risque;
-  font-size: 38px;
-  line-height: 44px;
-}
-
-.callText{
-  font-family: Roboto;
-}
-
-.text2Left :nth-child(1){
-  font-family: Risque;
+.firstTextHeader, .secondTextHeader{
   font-size: 56px;
   line-height: 65px;
 }
 
-.text2Left :nth-child(2){
-  font-family: Risque;
-  font-size: 38px;
-  line-height: 44px;
+.mainTextFooter{
+  font-size: 36px;
+  line-height: 38px;
 }
 
-.mainText2Right{
-  font-family: Risque;
-  font-size: 42px;
-  line-height: 49px;
+.secondTextFooter{
+  font-size: 24px;
+  line-height: 26px;
 }
 
-.secondText2Right{
-  font-family: Roboto;
-  font-size: 28px;
-  line-height: 33px;
+.left p, .right p{
+  font-size: 24px;
+  line-height: 26px;
 }
 
-.field, .what, .textarea, .dropdown-choise, .dropdown-list-item{
-  font-family: Roboto;
-  font-size: 16px;
-  line-height: 19px;
+.left span, .right span{
+  font-size: 20px;
+  line-height: 22px;
 }
 
-.section3 span {
-  font-family: Risque;
-  font-size: 56px;
-  line-height: 65px;
+.whiteIcon {
+  font-size: 40px;
 }
 
+.dollar{
+  font-size: 24px;
+}
 
-@media (max-width: 768px){
-  .mainText{
-    font-size: 52px;
-    line-height: 60px;
-  }
-
-  .loremText{
-    font-size: 28px;
-    line-height: 32px;
-  }
-
-  .text2Left :nth-child(1){
-    font-size: 52px;
+@media (max-width: 1372px){
+  .firstTextHeader, .secondTextHeader{
+    font-size: 50px;
     line-height: 60px;
   }
   
-  .text2Left :nth-child(2){
-    font-size: 28px;
-    line-height: 32px;
+  .mainTextFooter{
+    font-size: 30px;
+    line-height: 36px;
   }
-
-  .section3 span{
-    font-size: 52px;
-    line-height: 60px;
-  }
-
-  .what{
-    font-size: 18px;
-    line-height: 21px;
-  }
-
-  .field, .textarea, .dropdown-choise, .dropdown-list-item{
+  
+  .secondTextFooter{
     font-size: 20px;
-    line-height: 23px;
+    line-height: 24px;
+  }
+  
+  .left p, .right p{
+    font-size: 20px;
+    line-height: 24px;
+  }
+  
+  .left span, .right span{
+    font-size: 16px;
+    line-height: 19px;
+  }
+  
+  .whiteIcon {
+    font-size: 38px;
+  }
+  
+  .dollar{
+    font-size: 20px;
   }
 }
 
+@media (max-width: 1193px){
+  .firstTextHeader, .secondTextHeader{
+    font-size: 44px;
+    line-height: 53px;
+  }
+  
+  .mainTextFooter{
+    font-size: 26px;
+    line-height: 31px;
+  }
+  
+  .secondTextFooter{
+    font-size: 18px;
+    line-height: 21px;
+  }
+  
+  .left p, .right p{
+    font-size: 18px;
+    line-height: 21px;
+  }
+  
+  .whiteIcon {
+    font-size: 36px;
+  }
+  
+  .dollar{
+    font-size: 18px;
+  }
+}
 
+@media (max-width: 1144px){
+  .whiteIcon {
+    font-size: 30px;
+  }
+  
+  .dollar{
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 916px){
+  .firstTextHeader, .secondTextHeader{
+    font-size: 40px;
+    line-height: 48px;
+  }
+}
+
+@media (max-width: 778px){
+  .firstTextHeader, .secondTextHeader{
+    font-size: 40px;
+    line-height: 48px;
+  }
+  
+  .mainTextFooter{
+    font-size: 24px;
+    line-height: 29px;
+  }
+  
+  .secondTextFooter{
+    font-size: 18px;
+    line-height: 22px;
+  }
+  
+  .left p, .right p{
+    font-size: 18px;
+    line-height: 22px;
+  }
+  
+  .left span, .right span{
+    font-size: 14px;
+    line-height: 17px;
+  }
+  
+  .whiteIcon {
+    font-size: 20px;
+  }
+  
+  .dollar{
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 675px){
+  .secondTextFooter{
+    font-size: 15px;
+    line-height: 18px;
+  }
+}
+
+@media (max-width: 523px){
+  .firstTextHeader, .secondTextHeader{
+    font-size: 30px;
+    line-height: 36px;
+  }
+  
+  .mainTextFooter{
+    font-size: 20px;
+    line-height: 24px;
+  }
+  
+  .secondTextFooter{
+    font-size: 16px;
+    line-height: 19px;
+  }
+  
+  .left p, .right p{
+    font-size: 16px;
+    line-height: 19px;
+  }
+  
+  .left span, .right span{
+    font-size: 12px;
+    line-height: 14px;
+  }
+  
+  .whiteIcon {
+    font-size: 20px;
+  }
+  
+  .dollar{
+    font-size: 15px;
+  }
+
+}
+
+@media (max-width: 401px){
+  .firstTextHeader, .secondTextHeader{
+    font-size: 25px;
+    line-height: 30px;
+  }
+  
+  .mainTextFooter{
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .left p, .right p{
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
